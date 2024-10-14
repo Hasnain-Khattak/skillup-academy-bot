@@ -16,7 +16,6 @@ python-dotenv
 docx2txt
 lark
 streamlit
-pypdf
 
 # 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
 
