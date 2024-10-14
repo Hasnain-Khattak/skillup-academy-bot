@@ -17,3 +17,4 @@ streamlit
 edge_tts
 streamlit_mic_recorder
 langchain_cohere
+faiss-cpu
