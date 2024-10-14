@@ -1,0 +1,23 @@
+langchain
+langchain_community
+langchain_core
+langchain_groq
+langchain_google_genai
+langchain-text-splitters
+langchainhub
+python-docx
+chromadb
+langchain-chroma
+langchain-huggingface
+rich
+pypdf
+google-generativeai
+python-dotenv
+docx2txt
+lark
+streamlit
+pypdf
+
+# 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
+
+# AIzaSyB7rywvOUj2ah6vN5aXQMBZTLFdgHFlLzM
