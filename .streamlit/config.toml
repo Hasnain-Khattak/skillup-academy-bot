@@ -1,0 +1,10 @@
+[theme]
+primaryColor="#12a131"
+backgroundColor="#222429"
+secondaryBackgroundColor="#323640"
+textColor="#f5f8fc"
+font="sans serif"
+
+[server]
+runOnSave = true
+maxUploadSize = 20
