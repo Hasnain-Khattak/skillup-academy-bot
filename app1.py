@@ -199,7 +199,7 @@ if text or query:
             # Add response to chat history
             st.session_state.chat_history.append({"role": "assistant", "content": response})
         except Exception as e:
-            st.error(f"An internal error occurred: {e}")
+            st.error(f"An internal error occurred. Please check your internet connection")
 
     # Generate voice response if the user has enabled it
     if "voice_response" in st.session_state and st.session_state.voice_response:
