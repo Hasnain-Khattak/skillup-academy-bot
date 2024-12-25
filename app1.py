@@ -40,7 +40,7 @@ st.markdown("""
 
 # Streamlit setup
 with st.sidebar:
-    st.image("assets/logo.png", use_column_width=True)
+    st.image("assets/logo.png", use_container_width=True)
     st.markdown("## Skillup Academy ChatBot")
     st.write("This bot can answer questions related to Skillup academy courses, outlines, and instructors.")
     st.divider()
