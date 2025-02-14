@@ -73,7 +73,7 @@ def reset_conversation():
     ]
 
 def rag_qa_chain(question, retriever, chat_history):
-    llm = ChatGroq(model="llama-3.1-70b-versatile")
+    llm = ChatGroq(model="mixtral-8x7b-32768")
     output_parser = StrOutputParser()
 
     # System prompt to contextualize the question
@@ -191,14 +191,15 @@ if text or query:
 
     # Generate response
     with col2.chat_message("assistant", avatar="assets/assistant.png"):
-        
+        try:
             response = st.write_stream(rag_qa_chain(question=text if text else query,
                                 retriever=st.session_state["vectorstore"].as_retriever(search_kwargs={"k": 6}),
                                 chat_history=st.session_state.chat_history))
-        
+            
             # Add response to chat history
             st.session_state.chat_history.append({"role": "assistant", "content": response})
-       
+        except Exception as e:
+            st.error(f"An internal error occurred. Please check your internet connection")
 
     # Generate voice response if the user has enabled it
     if "voice_response" in st.session_state and st.session_state.voice_response:
