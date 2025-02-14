@@ -191,15 +191,14 @@ if text or query:
 
     # Generate response
     with col2.chat_message("assistant", avatar="assets/assistant.png"):
-        try:
+        
             response = st.write_stream(rag_qa_chain(question=text if text else query,
                                 retriever=st.session_state["vectorstore"].as_retriever(search_kwargs={"k": 6}),
                                 chat_history=st.session_state.chat_history))
         
             # Add response to chat history
             st.session_state.chat_history.append({"role": "assistant", "content": response})
-        except Exception as e:
-            st.error(f"An internal error occurred. Please check your internet connection")
+       
 
     # Generate voice response if the user has enabled it
     if "voice_response" in st.session_state and st.session_state.voice_response:
